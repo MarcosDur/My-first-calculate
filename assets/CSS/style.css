@@ -1,19 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Sixtyfour&display=swap');
+
+:root{
+    --primary-color:  #042940;
+    --second-color:  #D6D58E;
+    --third-color: #DBF227;
+}
+
+h1{
+    text-align: center;
+    margin-top: 100px;
+    color: white;
+    font-size: 300%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--third-color);
+    font-family: "Darker Grotesque", sans-serif;
+    font-weight: 400;
+    font-family: "Sixtyfour", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "BLED" 0,
+        "SCAN" 0;
+}
+
 
 body{
-    background-color: antiquewhite;
+    background-color: var(--primary-color);
 
 }
 
 textarea{
+    border-width: 1px;
+    border-radius: 4%;
     width: 95%;
-    margin: 18px auto;
-    font-size: 200%;
+    margin-bottom: 18px;
+    font-size: 250%;
     text-align: center;
 }
 
 .container{
+    box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.775);
+    border-style: ridge;
+    border:  black;
     display: flex;
-    background-color: black;
+    background-color:var(--second-color);
     margin: 10% auto;
     padding: 5%;
     max-width: 20%;
@@ -32,6 +63,9 @@ textarea{
 }
 
 button{
+    box-shadow: 2px 5px 3px rgba(0, 0, 0, 0.638);
+    border-width: 1%;
+    border: double rgba(0, 0, 0, 0.384);
     padding: 10px;
     text-align: center;
     cursor: pointer;
