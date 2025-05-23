@@ -1,0 +1,44 @@
+
+body{
+    background-color: antiquewhite;
+
+}
+
+textarea{
+    width: 95%;
+    margin: 18px auto;
+    font-size: 200%;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    background-color: black;
+    margin: 10% auto;
+    padding: 5%;
+    max-width: 20%;
+    border-radius: 8%;
+    flex-direction: column;
+    width: 300px;
+}
+
+
+.btns {
+    font-size: 100%;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+button{
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+button:hover{
+    background-color: rgb(255, 255, 255);
+    
+}
