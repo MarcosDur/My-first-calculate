@@ -4,7 +4,6 @@ const buttons = document.querySelectorAll('.button');
 const display = document.querySelector('.display');
 let expression = '';
 
-
 function pressButton(valor){
     if(valor === '='){
         calculate();
@@ -45,6 +44,21 @@ buttons.forEach(function(button){
     button.addEventListener('click',function(){
         pressButton(this.value);//aqui utilizamos o this.value por que queremos pegar o valor que esta no html do botão 
     });
+});
+
+//Capture event on keyboard
+document.addEventListener("keydown", function(event){
+    const key = event.key;
+    
+    if((key >= '0' && key <= '9') || ['+','-','*','/','.','=','Enter','c','C'].includes(key)){
+        if(key === 'Enter'){
+            pressButton('=');
+        }else if(key === 'c' || key === 'C'){
+            pressButton('C');
+        }else {
+            pressButton(key);
+        }
+    }
 });
 
 // button.addEventListener('click', function() {
