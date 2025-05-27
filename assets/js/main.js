@@ -15,7 +15,7 @@ function pressButton(valor){
     };
 }
 
-function calculate() {
+function calculate(e) {
     // let resultado = eval(expression);// forma mais fácil apra realizar o calculo
         if(!/^[0-9+\-*/(). ]+$/.test(expression)){//Regex que valida apenas caracteres seguros, usado para cirar um padrão de dados válidos 
             alert('Espressão inválida!');
@@ -24,7 +24,6 @@ function calculate() {
         try{
             let resultado = new Function('return ' + expression)();// Cria uma função e executa — avalia a conta
             atualziarDisplay(resultado);
-                console.log("FOIIIII");
         } catch (e) {
             atualziarDisplay('Erro');
         }
